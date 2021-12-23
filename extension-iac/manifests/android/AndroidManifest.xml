@@ -9,11 +9,13 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:launchMode="singleTask"
             android:configChanges="keyboardHidden|orientation|screenSize">
-            <intent-filter>
-               <action android:name="android.intent.action.VIEW" />
-               <category android:name="android.intent.category.DEFAULT" />
-               <category android:name="android.intent.category.BROWSABLE" />
-               <data android:scheme="{{android.package}}" />
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="chkobba.neo.tn" />
             </intent-filter>
         </activity>
 
